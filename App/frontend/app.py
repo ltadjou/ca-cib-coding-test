@@ -76,7 +76,6 @@ user_input = st.text_area("Enter chat text for NER:", "")
 
 # Button to submit
 if st.button("Submit"):
-    st.success(f"You entered: {user_input}")
     response = requests.post(
         "http://backend:8000/extract-entities",  # Remplacez par l'URL de votre API
         json={"text": user_input}
