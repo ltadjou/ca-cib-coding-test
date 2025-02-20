@@ -24,7 +24,7 @@ To launch the application, follow these steps:
 
 2. Navigate to the project directory:
    ```bash
-   cd ca-cib-coding-test
+   cd ca-cib-coding-test/App
 
 3. Run the following command to build and start the Docker containers:
    ```bash
@@ -39,37 +39,22 @@ Once the containers are up and running, you can access the homepage via the foll
 - **Homepage**: [http://localhost:8501/](http://localhost:8501/) (or the appropriate port if different)
 Make sure to replace `8501` with the correct port number if your application uses a different one.
 You will see the following home interface.
+
 ![Alt Text](./Documentation/images/Home.png)
 
 ## Upload docx/doc file and Apply NER on Chat txt
-<p align="center">
-  <img src="/Documentation/images/wordDocProcess.png" width="200"/>
-  <img src="/Documentation/images/NER.png" width="200"/>
-</p>
-
-
-
-
-## Technologies utilisées
-Listez les technologies, langages, frameworks et outils utilisés dans le projet. Par exemple :
-- **Langages** : Python, JavaScript
-- **Frameworks** : Django, React
-- **Base de données** : PostgreSQL
-- **Outils** : Docker, Git, CI/CD
+![Alt Text](/Documentation/images/wordDocProcess.png)
 
 ---
+![Alt Text](/Documentation/images/NER.png)
 
-## Installation
-Fournissez des instructions détaillées pour installer et configurer le projet localement. Par exemple :
-```bash
-# Cloner le dépôt
-git clone https://github.com/votre-utilisateur/votre-projet.git
 
-# Accéder au répertoire du projet
-cd votre-projet
 
-# Installer les dépendances
-pip install -r requirements.txt
 
-# Lancer le serveur
-python manage.py runserver
+## Used Technologies
+
+- **Langages** : Python
+- **Frameworks** : FastAPI, Streamlit, Transformers
+- **Outils** : Docker, 
+
+---
