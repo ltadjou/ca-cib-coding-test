@@ -12,10 +12,19 @@ services:
 
   backend:
     build: ./backend
+    env_file:
+      - .env
     ports:
       - "8000:8000"
+    environment:
+      - HF_MODEL_NAME=${HF_MODEL_NAME}
+      - HF_TOKEN=${HF_TOKEN}
+    volumes:
+      - huggingface_cache:/root/.cache/huggingface
     networks:
       - app-network
+volumes:
+  huggingface_cache:
 
 networks:
   app-network:

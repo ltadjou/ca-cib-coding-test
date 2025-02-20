@@ -13,7 +13,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copier le code de l'application
 COPY . .
 
-# Exposer le port sur lequel Streamlit va tourner
 EXPOSE 8501
 
 # Commande pour lancer Streamlit

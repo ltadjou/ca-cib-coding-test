@@ -3,20 +3,18 @@ from spacy.matcher import Matcher
 import re
 from transformers import pipeline
 
-nlp=spacy.load('en_core_web_trf')
-matcher = Matcher(nlp.vocab)
+#nlp=spacy.load('en_core_web_trf')
+#matcher = Matcher(nlp.vocab)
 
 # Regular expressions for financial information
 money_pattern = r'\$\d+(\.\d{2})?'  # Matches dollar amounts, e.g., $50, $50.25
 percentage_pattern = r'\b\d+(\.\d+)?%'  # Matches percentages, e.g., 10%, 10.5%
-from flair.models import SequenceTagger
-from flair.data import Sentence
+
 
 text = """11:49:05 I'll revert regarding BANK ABC to try to do another 200 mio at 2Y
 FR001400QV82	AVMAFC FLOAT	06/30/28
 offer 2Y EVG estr+45bps
 estr average Estr average / Quarterly interest payment"""
-tagger = SequenceTagger.load("flair/ner-english")
 
 from transformers import AutoTokenizer, AutoModelForTokenClassification
 from transformers import pipeline

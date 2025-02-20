@@ -10,6 +10,14 @@ COPY requirements.txt .
 # Installer les dépendances
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Télécharger le modèle Hugging Face lors de la construction de l'image
+ARG HF_MODEL_NAME
+ARG HF_TOKEN
+
+# Définir les variables d’environnement
+ENV HF_MODEL_NAME=${HF_MODEL_NAME}
+ENV HF_TOKEN=${HF_TOKEN}
+
 # Copier le code de l'application
 COPY . .
 
